@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I need to answer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div>
+        <h1 class="text-center p-5 w-full font-medium text-5xl text-emerald-800 underline">Answers of four Important JavaScript Questions</h1>
+    </div>
+    <br>
+    <ol class="p-5 w-full text-justify space-y-3">
+        <li class="font-medium text-3xl text-violet-600">1. What is DOM and what is the purpose of DOM?</li>
+        <p class="font-semibold py-2 text-lg">Ans: The Document Object Model (DOM) is a way for web documents to talk to programs. It shows what the page looks like so that programs can change the structure, style, and content of the document. The goal of the DOM is to give developers a standard way to access and change the elements of a web page. This lets developers make web pages that are dynamic and interactive.</p>
+        <br>
+        <li class="font-semibold text-3xl text-sky-700">2. How will you select HTML elements using DOM? Name the DOM
+            methods.</li>
+        <p class="font-semibold text-lg py-2">Ans: DOM can be selected in many ways. There are few  common ways I have shown to select dom
+            :
+        <ul class="px-20">
+            <li><span class="font-bold"> 1.</span> getElementById(): It picks an element based on its ID attribute.</li>
+            <li><span class="font-bold"> 2.</span> getElementByClassName(): It picks out all of the elements that have the given class name.</li>
+            <li><span class="font-bold"> 3.</span> getElementByTagName(): It picks out all the elements that have the given tag name.</li>
+            <li><span class="font-bold"> 4.</span> querySelector(): It takes a CSS selector and finds the first element that matches it.</li>
+            <li><span class="font-bold"> 5.</span> querySelectorAll(): It picks out all of the elements that match a CSS selector.</li>
+        </ul>
+        </p>
+        <br>
+        <li class="font-semibold text-3xl text-purple-800">3. What is event bubble?
+        </li>
+        <p class="font-semibold py-2 text-lg">Ans: Event bubbling is when events move up the DOM tree from child elements to their parents. When an event happens on a child element, it is first handled by the child element, then sent up the tree to its parents, and so on. This can be useful for making event handlers that work on multiple elements at once, but if it's not done right, it can also cause unexpected behavior.</p>
+            <br>
+        <li class="font-semibold text-3xl text-sky-700">4. What is a callback function and why will you use it?
+        </li>
+        <p class="font-semibold py-2 text-lg">Ans: Callback functions are provided to other functions and executed afterwards. Event-driven programming uses callback functions to define bespoke behavior based on user actions or other events. They can also manage asynchronous processes like retrieving server data. By giving a callback function as a parameter, the program can continue executing while the operation is in progress and execute the callback function thereafter.</p>
+    </ol>
+</body>
+
+</html>

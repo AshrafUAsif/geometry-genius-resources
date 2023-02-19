@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/291457d7c6.js" crossorigin="anonymous"></script>
+</head>
+<body class="mx-12 px-50">
+  <header class="flex items-center justify-between mt-6 px-4 py-2 bg-blue-100 rounded-lg">
+    <h2 class="text-3xl font-semibold">Interactive<br><span class="text-xl font-normal">Geometry Genius</span></h2>
+    <a id="blog" href="https://www.example.com" target="_blank" rel="noopener noreferrer" class="px-8 py-2 text-white bg-blue-500 rounded hover:bg-blue-600 focus:bg-blue-600 focus:outline-none">Blog</a>
+  </header>
+  <main>
+    <section class="pt-6 flex flex-col md:flex-row lg:flex-row">
+      <div class="geometry-details rounded-lg w-[70%] bg-slate-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="card card-compact w-full bg-pink-200 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./geometry-genius-resources-main/images/triangle.png" alt="Triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="first-geometry">Triangle</h2>
+            <p id="triangle-area">Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
+            <div class="flex flex-row items-center justify-center mt-4">
+              <input type="number" name="base" id="base" class="form-input w-1/2 mr-2 text-center" placeholder="Base (b)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+              <input type="number" name="height" id="height" class="form-input w-1/2 ml-2 text-center" placeholder="Height (h)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+            </div>
+            <br>
+            <div class="card-actions">
+              <button id="triangle-card" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded w-12rem">Calculate</button>
+            </div>
+            <p id="result"></p>
+          </div>
+        </div>
+        
+        <div class="card card-compact w-full shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./geometry-genius-resources-main/images/rectangle.png" alt="Rectangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="second-geometry">Rectangle</h2>
+            <p>Area (A) = w <i class="fa-solid fa-xmark"></i> l</p>
+            <div class="flex flex-row items-center justify-center mt-4">
+              <input type="number" name="width" id="width-rectangle" class="form-input w-1/2 mr-2 text-center" placeholder="Width (w)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+              <input type="number" name="length" id="length-rectangle" class="form-input w-1/2 ml-2 text-center" placeholder="Length (l)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+            </div>
+            <br>
+            <div class="card-actions">
+              <button id="rectangle-card" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded w-full md:w-12rem">Calculate</button>
+            </div>
+            <p id="rectangle-result"></p>
+          </div>
+        </div>
+        <div class="card card-compact w-full shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./geometry-genius-resources-main/images/parallelogram.png" alt="Parallelogram" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="third-geometry" class="card-title">Parallelogram</h2>
+            <p>Area (A) = b <i class="fa-solid fa-times"></i> h</p>
+            <div class="flex flex-row items-center justify-center mt-4">
+              <input type="number" name="parallelogram-base" id="parallelogram-base" class="form-input w-1/2 mr-2 text-center" placeholder="Base (b)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+              <input type="number" name="parallelogram-height" id="parallelogram-height" class="form-input w-1/2 ml-2 text-center" placeholder="Height (h)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+            </div>
+            <br>
+            <div class="card-actions">
+              <button id="parallelogram-card" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded w-12rem">Calculate</button>
+            </div>
+            <p id="parallelogram-result"></p>
+          </div>
+        </div>
+        
+        <div class="card card-compact bg-blue-200 w-full shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./geometry-genius-resources-main/images/rhombus.png" alt="Rhombus" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="fourth-geometry" class="card-title">Rhombus</h2>
+            <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> d1 <i class="fa-solid fa-xmark"></i> d2</p>
+            <div class="flex flex-row items-center justify-center mt-4">
+              <input type="number" name="parallelogram-base" id="diagonal1" class="form-input w-1/2 mr-2 text-center" placeholder="diagonal 1 value (d1)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+              <input type="number" name="parallelogram-height" id="diagonal2" class="form-input w-1/2 ml-2 text-center" placeholder="diagonal 2 value (d2)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+            </div>
+            <br>
+            <div class="card-actions">
+              <button id="rhombus-card" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded w-12rem">Calculate</button>
+            </div>
+            <p id="rhombus-result"></p>
+          </div>
+        </div>
+        <div class="card card-compact w-full shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./geometry-genius-resources-main/images/pentagon.png" alt="Pentagon" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="fifth-geometry" class="card-title">Pentagon</h2>
+            <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> p <i class="fa-solid fa-xmark"></i> b</p>
+            <div class="flex flex-row items-center justify-center mt-4">
+              <input type="number" name="pentagon-p" id="pentagon-p" class="form-input w-1/2 mr-2 text-center" placeholder="Enter a value (p)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+              <input type="number" name="pentagon-b" id="pentagon-b" class="form-input w-1/2 ml-2 text-center" placeholder="Enter a value (b)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+            </div>
+            <br>
+            <div class="card-actions">
+              <button id="pentagon-card" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded w-12rem">Calculate</button>
+            </div>
+            <p id="pentagon-result"></p>
+          </div>
+        </div>
+        <div class="card card-compact w-full shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./geometry-genius-resources-main/images/ellipse.png" alt="Ellipse" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 id="sixth-geometry" class="card-title">Ellipse</h2>
+            <p>Area (A) =<span>&#8508;</span>ab</p>
+            <div class="flex flex-row items-center justify-center mt-4">
+              <input type="number" name="ellipse-a" id="ellipse-a" class="form-input w-1/2 mr-2 text-center" placeholder="Enter a value (a)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+              <input type="number" name="ellipse-b" id="ellipse-b" class="form-input w-1/2 ml-2 text-center" placeholder="Enter a value (b)">
+              <span class="text-gray-700 text-sm ml-2">cm</span>
+            </div>
+            <br>
+            <div class="card-actions">
+              <button id="ellipse-card" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded w-12rem">Calculate</button>
+            </div>
+            <p id="ellipse-result"></p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="area-details rounded-lg w-full md:w-[35%] lg:w-[30%] bg-slate-100 mx-auto gap-2 py-4">
+        <h1 class="text-2xl font-bold text-center underline">Area Calculation</h1>
+        <div class="overflow-x-auto">
+          <table id="table-container" class="w-full mt-8">
+            <thead>
+              <!-- <tr>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Area (cm<sup>2</sup>)</th> -->
+                <!-- <th class="px-4 py-2">Convert to m<sup>2</sup></th>  -->
+              <!-- </tr> --> -->
+            </thead>
+            <tbody >
+              <!-- <tr>
+                <td id="result-number">1</td>
+                <td class="px-4 py-2" id="result-name"></td>
+                <td class="px-4 py-2" id="result-area"></td>
+                <td class="px-4 py-2">
+                  <button id="convert-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Convert to m<sup>2</sup></button>
+                </td>
+              </tr> -->
+            </tbody>
+          </table>
+          
+        </div>
+      </div>
+      
+    </section>
+  </main>
+  <script src="js/function.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
